@@ -21,6 +21,17 @@ const useStyles = makeStyles({
     justifyContent: "center",
     alignItems: "center",
   },
+  circularIcons: {
+    background: "#e0e0e0",
+    padding: "10px",
+    borderRadius: "50%",
+    color: "#000000",
+    marginLeft: "8px",
+  },
+  headerRight: {
+    display: "flex",
+    flexDirection: "row",
+  },
 });
 
 export default useStyles;
