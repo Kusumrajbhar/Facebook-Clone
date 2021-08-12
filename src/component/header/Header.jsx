@@ -13,75 +13,95 @@ import SportsEsportsIcon from "@material-ui/icons/SportsEsports";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 import Avatar from "@material-ui/core/Avatar";
-import { Typography } from "@material-ui/core";
+import Tooltip from "@material-ui/core/Tooltip";
 
 import useStyles from "./styles";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const classes = useStyles();
+
   return (
     <div>
       <AppBar position="static" className={classes.header}>
         <Toolbar>
-          <Typography>
-            <img
-              src="https://1000logos.net/wp-content/uploads/2021/04/Facebook-logo.png"
-              alt="facebook logo"
-              height="50px"
-              width="70px"
-            />
-          </Typography>
-          <InputBase
-            className={classes.searchTextField}
-            placeholder="Search Facebook"
-            size="large"
-            startAdornment={<SearchIcon color="action" />}
-          />
-          <Typography className={classes.centerHeader}>
-            <a href="/home">
-              <HomeIcon color="action" className={classes.icons} />
+          <div className={classes.flex}>
+            <div>
+              <img
+                src="https://1000logos.net/wp-content/uploads/2021/04/Facebook-logo.png"
+                alt="facebook logo"
+                height="45px"
+                width="70px"
+              />
+            </div>
+            <div>
+              <InputBase
+                className={classes.searchTextField}
+                placeholder="Search Facebook"
+                size="large"
+                startAdornment={<SearchIcon color="action" />}
+              />
+            </div>
+          </div>
+
+          <div className={classes.centerHeader}>
+            <a href="/">
+              <Tooltip title="Home">
+                <HomeIcon color="action" className={classes.icons} />
+              </Tooltip>
             </a>
             <a href="/watch">
-              <OndemandVideoIcon color="action" className={classes.icons} />
+              <Tooltip title="Watch">
+                <OndemandVideoIcon color="action" className={classes.icons} />
+              </Tooltip>
             </a>
             <a href="/marketPlace">
-              <StorefrontIcon color="action" className={classes.icons} />
+              <Tooltip title="MarketPlace">
+                <StorefrontIcon color="action" className={classes.icons} />
+              </Tooltip>
             </a>
             <a href="/group">
-              <PeopleAltIcon color="action" className={classes.icons} />
+              <Tooltip title="Groups">
+                <PeopleAltIcon color="action" className={classes.icons} />
+              </Tooltip>
             </a>
             <a href="gaming">
-              <SportsEsportsIcon color="action" className={classes.icons} />
+              <Tooltip title="Gaming">
+                <SportsEsportsIcon color="action" className={classes.icons} />
+              </Tooltip>
             </a>
-          </Typography>
-          <Typography style={{ display: "flex" }}>
-            <Typography style={{ display: "flex" }}>
+          </div>
+
+          <div className={classes.rightContent}>
+            <div className={classes.flex}>
               <Avatar>K</Avatar>
-              <span
-                style={{
-                  color: "black",
-                  marginRight: "12px",
-                  marginTop: "8px",
-                }}
-              >
+              <span className={classes.name}>
                 <b>Kusum</b>
               </span>
-            </Typography>
-            <Typography className={classes.headerRight}>
+            </div>
+            <div className={classes.headerRight}>
               <a href="/menu">
-                <MenuIcon className={classes.circularIcons} />
+                <Tooltip title="Menu">
+                  <MenuIcon className={classes.circularIcons} />
+                </Tooltip>
               </a>
               <a href="/messenger">
-                <ChatIcon className={classes.circularIcons} />
+                <Tooltip title="Messenger">
+                  <ChatIcon className={classes.circularIcons} />
+                </Tooltip>
               </a>
-              <a href="/">
-                <NotificationsIcon className={classes.circularIcons} />
+              <a href="/Notification">
+                <Tooltip title="Notifications">
+                  <NotificationsIcon className={classes.circularIcons} />
+                </Tooltip>
               </a>
-              <a href="/">
-                <ArrowDropDownIcon className={classes.circularIcons} />
+              <a href="/Account">
+                <Tooltip title="Account">
+                  <ArrowDropDownIcon className={classes.circularIcons} />
+                </Tooltip>
               </a>
-            </Typography>
-          </Typography>
+            </div>
+          </div>
         </Toolbar>
       </AppBar>
     </div>

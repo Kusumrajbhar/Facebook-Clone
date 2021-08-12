@@ -6,10 +6,15 @@ const useStyles = makeStyles({
     background: "#ffffff",
     justifyContent: "space-between",
   },
+  toolbar: {
+    display: "flex",
+    justifyContent: "space-between",
+  },
   searchTextField: {
     background: "#eeeeee",
     padding: "5px",
     borderRadius: "25px",
+    marginTop: "4px",
   },
   icons: {
     height: "30px",
@@ -20,6 +25,18 @@ const useStyles = makeStyles({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    textAlign: "center",
+    maxWidth: "50%",
+    minWidth: "50%",
+    "@media (max-width:1024px)": {
+      display: "none",
+    },
+  },
+  name: {
+    color: "#000000",
+    marginRight: "12px",
+    marginTop: "8px",
+    marginLeft: "5px",
   },
   circularIcons: {
     background: "#e0e0e0",
@@ -27,10 +44,18 @@ const useStyles = makeStyles({
     borderRadius: "50%",
     color: "#000000",
     marginLeft: "8px",
+    cursor: "pointer",
   },
   headerRight: {
     display: "flex",
     flexDirection: "row",
+  },
+  rightContent: {
+    display: "flex",
+    marginLeft: "auto",
+  },
+  flex: {
+    display: "flex",
   },
 });
 
