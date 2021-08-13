@@ -1,37 +1,44 @@
 import React from "react";
 import { Grid, InputBase, Paper, Typography } from "@material-ui/core";
 import SearchIcon from "@material-ui/icons/Search";
-import {
-  Dialog,
-  DialogActions,
-  DialogContent,
-  DialogTitle,
-} from "@material-ui/core";
+import { Dialog, DialogContent, DialogTitle } from "@material-ui/core";
 import useStyles from "./StylesModal";
+import menuModalData from "../../datas/MenuModal/MenuModalData";
 
 function MenuModal({ open, onClose }) {
   const classes = useStyles();
-  const [scroll, setScroll] = React.useState("paper");
+  //const [scroll, setScroll] = React.useState("paper");
   return (
-    <Dialog onClose={onClose} open={open} scroll={scroll}>
-      <DialogTitle>
-        <h1>Menu</h1>
-      </DialogTitle>
-      <DialogContent dividers={scroll === "paper"}>
+    <Dialog
+      onClose={onClose}
+      open={open}
+      className={classes.dialog}
+      //disableEnforceFocus
+      hideBackdrop
+      //disableBackdropClick
+      fullWidth
+    >
+      <h2>Menu</h2>
+      <DialogContent>
         <Grid container spacing={2}>
           <Grid item lg={6}>
-            <Paper className={classes.paperMenu}>
+            <Paper
+              className={classes.paperMenu}
+              // dividers={scroll === "paper"}
+              //scroll={scroll}
+            >
               <InputBase
                 className={classes.searchTextField}
                 placeholder="Search Facebook"
                 startAdornment={<SearchIcon color="action" />}
               />
               <h2>Social</h2>
-              <Typography>
+              <div>
                 <p>
                   <b className={classes.menuTitle}>Campus</b>
-                  <br />A Unique, exclusive space for college students on
-                  Facebook.
+                  <p>
+                    A Unique, exclusive space for college students on Facebook.
+                  </p>
                 </p>
                 <p>
                   <b className={classes.menuTitle}>Events</b>
@@ -59,9 +66,9 @@ function MenuModal({ open, onClose }) {
                   <br />
                   Discover and connect with business on Facebook.
                 </p>
-              </Typography>
+              </div>
               <hr />
-              <Typography>
+              <div>
                 <h2>Entertainment</h2>
                 <p>
                   <b className={classes.menuTitle}>Gaming Video</b>
@@ -78,9 +85,9 @@ function MenuModal({ open, onClose }) {
                   <br />A video destination personalized to your interests and
                   connections.
                 </p>
-              </Typography>
+              </div>
               <hr />
-              <Typography>
+              <div>
                 <h2>Shopping</h2>
                 <p>
                   <b className={classes.menuTitle}>Marketplace</b>
@@ -92,9 +99,9 @@ function MenuModal({ open, onClose }) {
                   <br />
                   Promotions and discounts from nearby businesses.
                 </p>
-              </Typography>
+              </div>
               <hr />
-              <Typography>
+              <div>
                 <h2>Personal</h2>
                 <p>
                   <b className={classes.menuTitle}>Recent Ad Activity</b>
@@ -117,9 +124,9 @@ function MenuModal({ open, onClose }) {
                   Check your local forecast and sign up for daily weather
                   notifications.
                 </p>
-              </Typography>
+              </div>
               <hr />
-              <Typography>
+              <div>
                 <h2>Professional</h2>
                 <p>
                   <b className={classes.menuTitle}>Ads Manager</b>
@@ -131,9 +138,9 @@ function MenuModal({ open, onClose }) {
                   <br />
                   Find a job that's right fro you.
                 </p>
-              </Typography>
+              </div>
               <hr />
-              <Typography>
+              <div>
                 <h2>Community Resources</h2>
                 <p>
                   <b className={classes.menuTitle}>Blood Donations</b>
@@ -166,9 +173,9 @@ function MenuModal({ open, onClose }) {
                   <br />
                   Donate and raise money for nonprofits and personal causes.
                 </p>
-              </Typography>
+              </div>
               <hr />
-              <Typography>
+              <div>
                 <h2>More from Facebook</h2>
                 <p>
                   <b className={classes.menuTitle}>Messenger</b>
@@ -180,12 +187,18 @@ function MenuModal({ open, onClose }) {
                   <br />
                   Let Kids message with close friends and family.
                 </p>
-              </Typography>
+              </div>
             </Paper>
           </Grid>
           <Grid item lg={6}>
-            <Paper>
-              <h1>Paper</h1>
+            <Paper className={classes.menuRightPaper}>
+              <h2>Create</h2>
+              {menuModalData?.map((data, index) => (
+                <div key={index} className={classes.menuRightData}>
+                  <span className={classes.menuIcons}>{data.icon}</span>
+                  <p className={classes.menuText}> {data.name}</p>
+                </div>
+              ))}
             </Paper>
           </Grid>
         </Grid>
