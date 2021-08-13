@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Home from "@material-ui/icons/Home";
+import Home from "./component/home/Home";
 import "./App.css";
 import Header from "./component/header/Header";
 import Watch from "./component/watch/Watch";

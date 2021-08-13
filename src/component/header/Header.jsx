@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import InputBase from "@material-ui/core/InputBase";
@@ -16,10 +16,32 @@ import Avatar from "@material-ui/core/Avatar";
 import Tooltip from "@material-ui/core/Tooltip";
 
 import useStyles from "./styles";
-import { Link } from "react-router-dom";
+import MenuModal from "../modals/MenuModal";
+import MessengerModal from "../modals/MessengerModal";
+import NotificationModal from "../modals/NotificationModal";
+import AccountModal from "../modals/AccountModal";
 
 const Header = () => {
   const classes = useStyles();
+  const [menu, setMenu] = useState(false);
+  const [messenger, setMessenger] = useState(false);
+  const [notification, setNotification] = useState(false);
+  const [account, setAccount] = useState(false);
+  const closeMenuHandler = () => {
+    setMenu(false);
+  };
+
+  const closeMessengerHandler = () => {
+    setMessenger(false);
+  };
+
+  const closeNotificationHandler = () => {
+    setNotification(false);
+  };
+
+  const closeAccountHandler = () => {
+    setAccount(false);
+  };
 
   return (
     <div>
@@ -80,26 +102,39 @@ const Header = () => {
               </span>
             </div>
             <div className={classes.headerRight}>
-              <a href="/menu">
+              <span onClick={() => setMenu(true)}>
                 <Tooltip title="Menu">
                   <MenuIcon className={classes.circularIcons} />
                 </Tooltip>
-              </a>
-              <a href="/messenger">
+              </span>
+              <MenuModal open={menu} onClose={closeMenuHandler} />
+
+              <span onClick={() => setMessenger(true)}>
                 <Tooltip title="Messenger">
                   <ChatIcon className={classes.circularIcons} />
                 </Tooltip>
-              </a>
-              <a href="/Notification">
+              </span>
+              <MessengerModal
+                open={messenger}
+                onClose={closeMessengerHandler}
+              />
+
+              <span onClick={() => setNotification(true)}>
                 <Tooltip title="Notifications">
                   <NotificationsIcon className={classes.circularIcons} />
                 </Tooltip>
-              </a>
-              <a href="/Account">
+              </span>
+              <NotificationModal
+                open={notification}
+                onClose={closeNotificationHandler}
+              />
+
+              <span onClick={() => setAccount(true)}>
                 <Tooltip title="Account">
                   <ArrowDropDownIcon className={classes.circularIcons} />
                 </Tooltip>
-              </a>
+              </span>
+              <AccountModal open={account} onClose={closeAccountHandler} />
             </div>
           </div>
         </Toolbar>
