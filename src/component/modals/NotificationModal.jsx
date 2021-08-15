@@ -1,12 +1,15 @@
 import React from "react";
-import { Card, Dialog } from "@material-ui/core";
+import { Paper, Dialog } from "@material-ui/core";
 
 function NotificationModal({ open, onClose }) {
   return (
     <Dialog open={open} onClose={onClose}>
-      <Card>
-        <h1>hello</h1>
-      </Card>
+      <Paper>
+        <h2>Notifications</h2>
+        <div>
+          <h3>New</h3>
+        </div>
+      </Paper>
     </Dialog>
   );
 }
