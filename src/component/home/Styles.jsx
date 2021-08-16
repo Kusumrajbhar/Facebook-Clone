@@ -34,7 +34,9 @@ const useStyles = makeStyles({
     height: "93vh",
     overflow: "scroll",
   },
-  midFlow: {},
+  midFlow: {
+    overflow: "hidden",
+  },
 });
 
 export default useStyles;

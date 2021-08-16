@@ -18,15 +18,11 @@ function MenuModal({ open, onClose }) {
       //disableBackdropClick
       fullWidth
     >
-      <h2>Menu</h2>
+      <h2 className="mr-5">Menu</h2>
       <DialogContent>
         <Grid container spacing={2}>
           <Grid item lg={6}>
-            <Paper
-              className={classes.paperMenu}
-              // dividers={scroll === "paper"}
-              //scroll={scroll}
-            >
+            <Paper className={classes.paperMenu}>
               <InputBase
                 className={classes.searchTextField}
                 placeholder="Search Facebook"

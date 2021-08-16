@@ -28,8 +28,17 @@
   color: #61dafb;
 }
 
-a:focus {
+/* a:focus {
   background-color: rgb(47, 7, 224);
+} */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #cfd8dc;
+  border-radius: 20px;
 }
 
 @keyframes App-logo-spin {

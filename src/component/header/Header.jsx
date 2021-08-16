@@ -21,6 +21,9 @@ import MessengerModal from "../modals/MessengerModal";
 import NotificationModal from "../modals/NotificationModal";
 import AccountModal from "../modals/AccountModal";
 
+import { Tabs, Tab } from "@material-ui/core";
+import { Link, NavLink } from "react-router-dom";
+
 const Header = () => {
   const classes = useStyles();
   const [menu, setMenu] = useState(false);
@@ -42,6 +45,12 @@ const Header = () => {
 
   const closeAccountHandler = () => {
     setAccount(false);
+  };
+
+  const [value, setValue] = React.useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
   };
 
   return (
@@ -68,6 +77,59 @@ const Header = () => {
           </div>
 
           <div className={classes.centerHeader}>
+            {/* <Tabs
+              value={value}
+              onChange={handleChange}
+              indicatorColor="primary"
+              textColor="primary"
+              iconColor="primary"
+              centered
+            >
+              <Tooltip title="Home">
+                <Tab
+                  icon={<HomeIcon color="action" className={classes.icons} />}
+                />
+              </Tooltip>
+
+              <Tooltip title="Watch">
+                <Tab
+                  icon={
+                    <OndemandVideoIcon
+                      color="action"
+                      className={classes.icons}
+                    />
+                  }
+                />
+              </Tooltip>
+
+              <Tooltip title="MarketPlace">
+                <Tab
+                  icon={
+                    <StorefrontIcon color="action" className={classes.icons} />
+                  }
+                />
+              </Tooltip>
+
+              <Tooltip title="Groups">
+                <Tab
+                  icon={
+                    <PeopleAltIcon color="action" className={classes.icons} />
+                  }
+                />
+              </Tooltip>
+
+              <Tooltip title="Gaming">
+                <Tab
+                  icon={
+                    <SportsEsportsIcon
+                      color="action"
+                      className={classes.icons}
+                    />
+                  }
+                />
+              </Tooltip>
+            </Tabs> */}
+
             <a href="/">
               <Tooltip title="Home">
                 <HomeIcon color="action" className={classes.icons} />
@@ -78,7 +140,7 @@ const Header = () => {
                 <OndemandVideoIcon color="action" className={classes.icons} />
               </Tooltip>
             </a>
-            <a href="/marketPlace" className={classes.hover}>
+            <a href="/marketPlace">
               <Tooltip title="MarketPlace">
                 <StorefrontIcon color="action" className={classes.icons} />
               </Tooltip>

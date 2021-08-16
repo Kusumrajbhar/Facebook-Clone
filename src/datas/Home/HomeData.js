@@ -271,6 +271,31 @@ const contact = [
   },
 ];
 
-const storyData = [""];
+const storyData = [
+  {
+    image: <img src={girl1} height="200" width="150" alt="" />,
+    name: "Shraddha",
+  },
+  {
+    image: <img src={girl2} height="200" width="150" alt="" />,
+    name: "Kusum",
+  },
+  {
+    image: <img src={boy1} height="200" width="150" alt="" />,
+    name: "Vishal",
+  },
+  {
+    image: <img src={boy2} height="200" width="150" alt="" />,
+    name: "Subrao",
+  },
+  {
+    image: <img src={boy3} height="200" width="150" alt="" />,
+    name: "Tenzin",
+  },
+  {
+    image: <img src={boy1} height="200" width="150" alt="" />,
+    name: "Prashant",
+  },
+];
 
-export { homeLeftData, contact };
+export { homeLeftData, contact, storyData };

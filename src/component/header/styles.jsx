@@ -20,6 +20,13 @@ const useStyles = makeStyles({
     height: "30px",
     width: "30px",
     padding: "10px 40px",
+    "&:active": {
+      color: "blue",
+      content: "",
+      display: "block",
+      borderBottom: "3px solid",
+      margin: "0 auto",
+    },
   },
   centerHeader: {
     display: "flex",
@@ -57,11 +64,11 @@ const useStyles = makeStyles({
   flex: {
     display: "flex",
   },
-  hover: {
-    "&:hover": {
-      background: "yellow",
-    },
-  },
+  // hover: {
+  //   "&:active": {
+  //     background: "yellow",
+  //   },
+  // },
 });
 
 export default useStyles;
