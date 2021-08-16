@@ -19,7 +19,7 @@ function Home() {
         <Paper className={classes.leftPaper} elevation={0}>
           <div>
             <div className={classes.userInfo}>
-              <span>
+              <span className="">
                 <Avatar>K</Avatar>
               </span>
               <p>Kusum</p>
@@ -27,8 +27,8 @@ function Home() {
 
             {homeLeftData?.map((data, index) => (
               <ListItem key={index} button>
-                <ListItemIcon></ListItemIcon>
-                <ListItemText primary={<b>{data}</b>} />
+                <ListItemIcon>{data.icon}</ListItemIcon>
+                <ListItemText primary={<b>{data.label}</b>} />
               </ListItem>
             ))}
           </div>
