@@ -57,6 +57,11 @@ const useStyles = makeStyles({
   flex: {
     display: "flex",
   },
+  hover: {
+    "&:hover": {
+      background: "yellow",
+    },
+  },
 });
 
 export default useStyles;

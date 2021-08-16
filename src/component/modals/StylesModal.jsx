@@ -3,6 +3,9 @@ import { makeStyles } from "@material-ui/styles";
 const useStyles = makeStyles({
   dialog: {
     height: "750px",
+    position: "absolute",
+    right: "0",
+    top: "30px",
     // display: "flex",
     // alignItems: "flex-end",
     // position: "absolute",

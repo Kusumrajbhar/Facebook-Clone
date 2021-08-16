@@ -27,6 +27,7 @@ const Header = () => {
   const [messenger, setMessenger] = useState(false);
   const [notification, setNotification] = useState(false);
   const [account, setAccount] = useState(false);
+  const [active, setActive] = useState(false);
   const closeMenuHandler = () => {
     setMenu(false);
   };
@@ -77,7 +78,7 @@ const Header = () => {
                 <OndemandVideoIcon color="action" className={classes.icons} />
               </Tooltip>
             </a>
-            <a href="/marketPlace">
+            <a href="/marketPlace" className={classes.hover}>
               <Tooltip title="MarketPlace">
                 <StorefrontIcon color="action" className={classes.icons} />
               </Tooltip>

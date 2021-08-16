@@ -10,11 +10,12 @@ import {
 import React from "react";
 import useStyles from "./Styles";
 import { homeLeftData, contact } from "../../datas/Home/HomeData";
+import girl1 from "../../Assets/Images/girl1.jpg";
 
 function Home() {
   const classes = useStyles();
   return (
-    <Grid container className={classes.page}>
+    <Grid container className={classes.main}>
       <Grid item lg={3}>
         <Paper className={classes.leftPaper} elevation={0}>
           <div>
@@ -34,10 +35,14 @@ function Home() {
           </div>
         </Paper>
       </Grid>
-      <Grid item lg={6}>
-        <Paper></Paper>
+      <Grid item lg={6} className={classes.page}>
+        <div className={classes.flowControl}>
+          <Paper>
+            <img src={girl1} alt="girl1" />
+          </Paper>
+        </div>
       </Grid>
-      <Grid item lg={3}>
+      <Grid item lg={3} className={classes.flowControl}>
         <Paper className={classes.page} elevation={0}>
           <h3>Your Pages</h3>
           <hr />
