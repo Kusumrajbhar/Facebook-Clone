@@ -1,7 +1,7 @@
 import React from "react";
-import { Grid, InputBase, Paper, Typography } from "@material-ui/core";
+import { Grid, InputBase, Paper } from "@material-ui/core";
 import SearchIcon from "@material-ui/icons/Search";
-import { Dialog, DialogContent, DialogTitle } from "@material-ui/core";
+import { Dialog, DialogContent } from "@material-ui/core";
 import useStyles from "./StylesModal";
 import menuModalData from "../../datas/MenuModal/MenuModalData";
 
