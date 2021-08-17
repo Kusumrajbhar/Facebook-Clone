@@ -18,7 +18,7 @@ function MenuModal({ open, onClose }) {
       //disableBackdropClick
       fullWidth
     >
-      <h2 className="mr-5">Menu</h2>
+      <h2 style={{ marginLeft: "5%" }}>Menu</h2>
       <DialogContent>
         <Grid container spacing={2}>
           <Grid item lg={6}>

@@ -28,9 +28,17 @@
   color: #61dafb;
 }
 
-/* a:focus {
-  background-color: rgb(47, 7, 224);
+/* a:hover {
+  color: blue;
+  content: "";
+  display: block;
+  border-bottom: 3px solid;
+  margin: 0 auto;
 } */
+
+.test {
+  color: red;
+}
 
 ::-webkit-scrollbar {
   width: 8px;

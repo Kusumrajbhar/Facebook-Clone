@@ -55,7 +55,7 @@ const Header = () => {
 
   return (
     <div>
-      <AppBar position="static" className={classes.header}>
+      <AppBar position="fixed" className={classes.header}>
         <Toolbar>
           <div className={classes.flex}>
             <div>

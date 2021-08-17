@@ -31,6 +31,8 @@ import girl2 from "../../Assets/Images/girl2.jpg";
 import boy1 from "../../Assets/Images/boy1.jpg";
 import boy2 from "../../Assets/Images/boy2.jpg";
 import boy3 from "../../Assets/Images/boy3.jpg";
+import nature from "../../Assets/Images/nature.jpg";
+import monkey from "../../Assets/Images/monkey.jpg";
 
 const homeLeftData = [
   // const classes = useStyles();
@@ -273,29 +275,87 @@ const contact = [
 
 const storyData = [
   {
-    image: <img src={girl1} height="200" width="150" alt="" />,
+    image: <img src={girl1} height="200" width="140" alt="" />,
     name: "Shraddha",
   },
   {
-    image: <img src={girl2} height="200" width="150" alt="" />,
+    image: <img src={girl2} height="200" width="140" alt="" />,
     name: "Kusum",
   },
   {
-    image: <img src={boy1} height="200" width="150" alt="" />,
+    image: <img src={boy1} height="200" width="140" alt="" />,
     name: "Vishal",
   },
   {
-    image: <img src={boy2} height="200" width="150" alt="" />,
+    image: <img src={boy2} height="200" width="140" alt="" />,
     name: "Subrao",
   },
+  // {
+  //   image: <img src={boy3} height="200" width="130" alt="" />,
+  //   name: "Tenzin",
+  // },
+  // {
+  //   image: <img src={boy1} height="200" width="130" alt="" />,
+  //   name: "Prashant",
+  // },
+];
+
+const createRoom = [
+  <img src={girl1} height="50" width="50" alt="" />,
+  <img src={girl2} height="50" width="50" alt="" />,
+  <img src={boy1} height="50" width="50" alt="" />,
+  <img src={boy2} height="50" width="50" alt="" />,
+  <img src={boy3} height="50" width="50" alt="" />,
+  <img src={girl1} height="50" width="50" alt="" />,
+  // <img src={girl2} height="50" width="50" alt="" />,
+  // <img src={boy1} height="50" width="50" alt="" />,
+  // <img src={boy2} height="50" width="50" alt="" />,
+  // <img src={boy3} height="50" width="50" alt="" />,
+];
+
+const postData = [
   {
-    image: <img src={boy3} height="200" width="150" alt="" />,
-    name: "Tenzin",
+    name: "Shraddha",
+    profileImage: boy1,
+    post: nature,
+    commenter: "Kusum",
+    Comment: "Awesome",
   },
   {
-    image: <img src={boy1} height="200" width="150" alt="" />,
+    name: "Kusum",
+    profileImage: girl2,
+    post: girl2,
+    commenter: "Shraddha",
+    Comment: "nice one",
+  },
+  {
+    name: "Vishal",
+    profileImage: boy2,
+    post: girl1,
+    commenter: "Subrao",
+    Comment: "Amazing",
+  },
+  {
+    name: "Subrao",
+    profileImage: boy1,
+    post: monkey,
+    commenter: "Prashant",
+    Comment: "Nice work",
+  },
+  {
     name: "Prashant",
+    profileImage: boy3,
+    post: boy1,
+    commenter: "Tenzin",
+    Comment: "Great TL",
+  },
+  {
+    name: "Tenzin",
+    profileImage: boy1,
+    post: boy3,
+    commenter: "Vishal",
+    Comment: "Superb",
   },
 ];
 
-export { homeLeftData, contact, storyData };
+export { homeLeftData, contact, storyData, createRoom, postData };
