@@ -129,7 +129,13 @@ const Header = () => {
                 />
               </Tooltip>
             </Tabs> */}
+            {/* {console.log("window.location.href", window.location.href)} */}
 
+            {/* <NavLink to="/" activeClassName="active">
+              <Tooltip title="Home">
+                <HomeIcon color="action" className={classes.icons} />
+              </Tooltip>
+            </NavLink> */}
             <a href="/">
               <Tooltip title="Home">
                 <HomeIcon color="action" className={classes.icons} />

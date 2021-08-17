@@ -57,3 +57,96 @@
     transform: rotate(360deg);
   }
 }
+.main {
+  background-color: #eceff1;
+  margin-top: 65px;
+  padding-top: 15px;
+}
+
+.iconLetter {
+  margin-right: 12px;
+}
+
+.marginRightTen {
+  margin-right: 10px;
+}
+
+.flexDisplay {
+  display: flex;
+}
+
+.marginWithBold {
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.flexWithCenter {
+  display: flex;
+  align-items: center;
+}
+
+.flexWithCenterJustify {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flexStartColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.inputFieldStyle {
+  background: #eeeeee;
+  border-radius: 25px;
+  width: 100%;
+  padding: 3px 10px;
+}
+
+.marginTopWithPadding {
+  margin-top: 30px;
+  padding: 15px;
+}
+
+.greenColor {
+  color: green;
+  margin-right: 7px;
+}
+
+.orangeColor {
+  color: Orange;
+  margin-right: 7px;
+}
+
+.purpleColor {
+  color: purple;
+  margin-right: 7px;
+  size: 80;
+}
+
+.marginWithPadding {
+  margin: 20px 0;
+  padding: 15px;
+}
+
+.paddingAround {
+  padding: 10px;
+}
+.circleIcon {
+  background: #e0e0e0;
+  padding: 5px;
+  border-radius: 50%;
+  color: #000000;
+  margin-left: 8px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.active {
+  color: blue;
+  content: "";
+  display: block;
+  border-bottom: 3px solid;
+  margin: 0 auto;
+}

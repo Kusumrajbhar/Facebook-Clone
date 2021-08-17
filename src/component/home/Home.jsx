@@ -5,11 +5,8 @@ import {
   ListItemIcon,
   ListItemText,
   Paper,
-  Input,
   Button,
   InputBase,
-  Typography,
-  TextField,
 } from "@material-ui/core";
 import React from "react";
 import useStyles from "./Styles";
@@ -32,13 +29,13 @@ import girl1 from "../../Assets/Images/girl1.jpg";
 function Home() {
   const classes = useStyles();
   return (
-    <Grid container className={classes.main}>
+    <Grid container className="main">
       <Grid item lg={3}>
         <Paper className={classes.leftPaper} elevation={0}>
           <div>
             <div className={classes.userInfo}>
-              <span className="">
-                <Avatar>K</Avatar>
+              <span>
+                <Avatar className="iconLetter">K</Avatar>
               </span>
               <p>Kusum</p>
             </div>
@@ -55,7 +52,7 @@ function Home() {
       <Grid item lg={6} className={classes.midFlow}>
         <div>
           <div>
-            <span style={{ display: "flex" }}>
+            <span className="flexDisplay">
               {storyData?.map((data, index) => (
                 <Paper spacing={5} key={index}>
                   {data.image}
@@ -63,97 +60,55 @@ function Home() {
               ))}
             </span>
           </div>
-          <Paper style={{ marginTop: "30px", padding: "15px" }}>
-            <div style={{ display: "flex" }}>
-              <Avatar style={{ marginRight: "2%" }}>
+          <Paper className="marginTopWithPadding">
+            <div className="flexDisplay">
+              <Avatar className="iconLetter">
                 <img src={girl1} height="50px" width="50px" alt="" />
               </Avatar>
               <InputBase
-                style={{
-                  background: "#eeeeee",
-                  borderRadius: "25px",
-                  width: "100%",
-                  padding: "3px 10px",
-                }}
+                className="inputFieldStyle"
                 placeholder="What's on your mind, Kusum?"
                 size="large"
               />
             </div>
             <hr />
-            <Grid
-              container
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-              spacing={0}
-            >
-              <Grid
-                item
-                lg={4}
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
+            <Grid container className="flexWithCenterJustify" spacing={0}>
+              <Grid item lg={4} className="flexWithCenterJustify">
                 <span>
-                  <VideoCallIcon color="secondary" />
+                  <VideoCallIcon
+                    color="secondary"
+                    style={{ marginRight: "7px" }}
+                  />
                 </span>
                 Live Video
               </Grid>
-              <Grid
-                item
-                lg={4}
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
+              <Grid item lg={4} className="flexWithCenterJustify">
                 <span>
-                  <InsertPhotoIcon style={{ color: "green" }} />
+                  <InsertPhotoIcon className="greenColor" />
                 </span>
                 Photo/Video
               </Grid>
-              <Grid
-                item
-                lg={4}
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
+              <Grid item lg={4} className="flexWithCenterJustify">
                 <span>
-                  <EmojiEmotionsIcon style={{ color: "orange" }} />
+                  <EmojiEmotionsIcon className="orangeColor" />
                 </span>
                 Feeling/Activity
               </Grid>
             </Grid>
           </Paper>
-          <Paper style={{ margin: "20px 0", padding: "15px" }}>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
+          <Paper className="marginWithPadding">
+            <div className="flexWithCenterJustify">
               <span>
                 <Button
-                  startIcon={
-                    <VideoCallIcon style={{ color: "purple", size: "30" }} />
-                  }
+                  startIcon={<VideoCallIcon className="purpleColor" />}
                   color="primary"
                 >
                   Create Room
                 </Button>
               </span>
-              <span style={{ display: "flex" }}>
+              <span className="flexDisplay">
                 {createRoom?.map((data, index) => (
-                  <span key={index} style={{ marginLeft: "10px" }}>
+                  <span key={index} className={classes.marginLeftTen}>
                     <Avatar>{data}</Avatar>
                   </span>
                 ))}
@@ -161,9 +116,9 @@ function Home() {
             </div>
           </Paper>
           {postData?.map((data, index) => (
-            <Paper key={index} style={{ marginBottom: "3%" }}>
-              <div style={{ display: "flex", padding: "3%" }}>
-                <Avatar style={{ marginRight: "2%" }}>
+            <Paper key={index} className={classes.marginBottomThree}>
+              <div className={classes.flexWithPaddingThree}>
+                <Avatar className="iconLetter">
                   <img
                     src={data.profileImage}
                     height="50px"
@@ -176,65 +131,36 @@ function Home() {
               <div>
                 <img src={data.post} height="350px" width="300px" alt="" />
               </div>
-              <div style={{ padding: "2% 5%" }}>
+              <div className={classes.paddingTwoFive}>
                 <hr />
-                <Grid
-                  container
-                  style={{ display: "flex", justifyContent: "center" }}
-                >
-                  <Grid
-                    item
-                    lg={3}
-                    style={{ display: "flex", alignItems: "center" }}
-                  >
-                    <ThumbUpAltOutlinedIcon style={{ marginRight: "10px" }} />{" "}
-                    Like
+                <Grid container className="flexWithCenterJustify">
+                  <Grid item lg={3} className="flexWithCenter">
+                    <ThumbUpAltOutlinedIcon className="marginRightTen" /> Like
                   </Grid>
-                  <Grid
-                    item
-                    lg={3}
-                    style={{ display: "flex", alignItems: "center" }}
-                  >
-                    <ChatBubbleOutlineOutlinedIcon
-                      style={{ marginRight: "10px" }}
-                    />
+                  <Grid item lg={3} className="flexWithCenter">
+                    <ChatBubbleOutlineOutlinedIcon className="marginRightTen" />
                     Comment
                   </Grid>
-                  <Grid
-                    item
-                    lg={3}
-                    style={{ display: "flex", alignItems: "center" }}
-                  >
-                    <RiShareForwardLine style={{ marginRight: "10px" }} /> Share
+                  <Grid item lg={3} className="flexWithCenter">
+                    <RiShareForwardLine className="marginRightTen" /> Share
                   </Grid>
                 </Grid>
                 <hr />
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "column ",
-                    alignItems: "flex-start",
-                  }}
-                >
+                <div className="flexStartColumn">
                   <h4>Comments</h4>
-                  <div style={{ display: "flex", margin: "2% 0" }}>
-                    <Avatar style={{ marginRight: "10px" }}>
+                  <div className={classes.flexWithMarginTwo}>
+                    <Avatar className="iconLetter">
                       <img src={girl1} height="50px" width="50px" alt="" />
                     </Avatar>
-                    <span style={{ fontSize: "14px" }}>
+                    <span className={classes.fontFourteen}>
                       <b>{data.commenter}</b>
                       <br />
                       {data.Comment}
                     </span>
                   </div>
                 </div>
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                  }}
-                >
-                  <Avatar style={{ marginRight: "10px" }}>
+                <div className="flexWithCenter">
+                  <Avatar className="iconLetter">
                     <img
                       src={data.profileImage}
                       height="50px"
@@ -243,12 +169,7 @@ function Home() {
                     />
                   </Avatar>
                   <InputBase
-                    style={{
-                      background: "#eeeeee",
-                      borderRadius: "25px",
-                      width: "100%",
-                      padding: "3px 10px",
-                    }}
+                    className="inputFieldStyle"
                     placeholder="Write a comment..."
                     endAdornment={<FiSmile />}
                   />
@@ -264,17 +185,9 @@ function Home() {
           <hr />
           <h3>Contacts</h3>
           {contact?.map((data, index) => (
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-              }}
-              key={index}
-            >
+            <div className="flexWithCenter" key={index}>
               <span>{data.icon}</span>
-              <p style={{ fontWeight: "bold", marginLeft: "10px" }}>
-                {data.name}
-              </p>
+              <p className="marginWithBold">{data.name}</p>
             </div>
           ))}
         </Paper>

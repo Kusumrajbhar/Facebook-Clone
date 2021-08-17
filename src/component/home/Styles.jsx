@@ -1,13 +1,6 @@
 import { makeStyles } from "@material-ui/styles";
 
 const useStyles = makeStyles({
-  main: {
-    // height: "93vh",
-    background: "#eceff1",
-    // overflow: "hidden",
-    marginTop: "65px",
-    paddingTop: "20px",
-  },
   page: {
     background: "#eceff1",
     padding: "10px",
@@ -41,7 +34,6 @@ const useStyles = makeStyles({
     width: "100%",
   },
   midFlow: {
-    // height: "93vh",
     overflowY: "scroll",
     padding: "2% 6%",
   },
@@ -50,6 +42,28 @@ const useStyles = makeStyles({
     padding: "5px",
     borderRadius: "25px",
     marginTop: "4px",
+  },
+  paddingTwoFive: {
+    padding: "2% 5%",
+  },
+
+  flexWithMarginTwo: {
+    display: "flex",
+    margin: "2% 0",
+  },
+  fontFourteen: {
+    fontSize: "14px",
+  },
+  marginBottomThree: {
+    marginBottom: "3%",
+  },
+  flexWithPaddingThree: {
+    display: "flex",
+    padding: "3%",
+    alignItems: "center",
+  },
+  marginLeftTen: {
+    marginLeft: "10px",
   },
 });
 
