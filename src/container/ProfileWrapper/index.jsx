@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Paper } from "@material-ui/core";
+import { Avatar, Paper, Button } from "@material-ui/core";
 import girl1 from "../../Assets/Images/girl1.jpg";
 
 function ProfileWrapper() {
@@ -22,12 +22,27 @@ function ProfileWrapper() {
     <div className="main">
       <Paper>
         <img src={localImage && localImage} height="300" width="300" alt="" />
-        <div>
-          <input
-            type="file"
-            onChange={uploadProfileImageHandler}
-            placeholder="Upload Profile"
-          />
+        <div className="flexWithCenterJustify">
+          <span style={{ width: "500px" }} className="flexWithCenter">
+            <span style={{ borderRadius: "50%" }} className="iconLetter">
+              <img
+                src={localImage && localImage}
+                height="100"
+                width="100"
+                alt=""
+              />
+            </span>
+            <span>Kusum Rajbhar</span>
+          </span>
+          <Button variant="contained" color="primary" component="label">
+            <input
+              style={{ padding: "5%" }}
+              type="file"
+              onChange={uploadProfileImageHandler}
+              hidden
+            />
+            Upload Image
+          </Button>
         </div>
       </Paper>
     </div>
