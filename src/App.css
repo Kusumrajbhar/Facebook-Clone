@@ -1,12 +1,13 @@
+:root {
+  --backgroundColor: #eceff1;
+}
 .App {
   text-align: center;
 }
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
-
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -58,9 +59,23 @@
   }
 }
 .main {
-  background-color: #eceff1;
+  background-color: var(--backgroundColor);
   margin-top: 65px;
   padding-top: 15px;
+}
+
+.icons {
+  height: 30px;
+  width: 20px;
+  padding: 10px 40px;
+  color: red;
+  /* "&:active": {
+    color: "blue",
+    content: "",
+    display: "block",
+    borderBottom: "3px solid",
+    margin: "0 auto",
+  }, */
 }
 
 .iconLetter {

@@ -12,7 +12,7 @@ function MenuModal({ open, onClose }) {
     <Dialog
       onClose={onClose}
       open={open}
-      className={classes.dialog}
+      className={classes.dialogPage}
       //disableEnforceFocus
       hideBackdrop
       //disableBackdropClick

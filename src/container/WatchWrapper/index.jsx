@@ -7,9 +7,9 @@ import HomeIcon from "@material-ui/icons/Home";
 import { BiMovie } from "react-icons/bi";
 import { HiSave } from "react-icons/hi";
 
-import useStyles from "../../container/WatchWrapper/Style";
+import useStyles from "./Style";
 
-function Watch() {
+function WatchWrapper() {
   const classes = useStyles();
   return (
     <div className={classes.mainWatch}>
@@ -66,4 +66,4 @@ function Watch() {
   );
 }
 
-export default Watch;
+export default WatchWrapper;

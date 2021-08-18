@@ -4,7 +4,6 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import InputBase from "@material-ui/core/InputBase";
 import SearchIcon from "@material-ui/icons/Search";
-import MenuIcon from "@material-ui/icons/Menu";
 import ChatIcon from "@material-ui/icons/Chat";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
@@ -13,14 +12,14 @@ import Tooltip from "@material-ui/core/Tooltip";
 import { CgMenuGridO } from "react-icons/cg";
 
 import useStyles from "./styles";
-import MenuModal from "../modals/MenuModal";
-import MessengerModal from "../modals/MessengerModal";
-import NotificationModal from "../modals/NotificationModal";
-import AccountModal from "../modals/AccountModal";
+import MenuModal from "../../component/modals/MenuModal";
+import MessengerModal from "../../component/modals/MessengerModal";
+import NotificationModal from "../../component/modals/NotificationModal";
+import AccountModal from "../../component/modals/AccountModal";
 import { mainHeaderData } from "../../datas/header/HeaderData";
 import FacebookLogo from "../../Assets/Images/FacebookLogo.png";
 
-const Header = () => {
+const HeaderWrapper = () => {
   const classes = useStyles();
   const [menu, setMenu] = useState(false);
   const [messenger, setMessenger] = useState(false);
@@ -125,4 +124,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default HeaderWrapper;

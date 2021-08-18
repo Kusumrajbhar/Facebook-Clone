@@ -18,19 +18,20 @@ const useStyles = makeStyles({
   },
   icons: {
     height: "30px",
-    width: "30px",
+    width: "20px",
     padding: "10px 40px",
-    "&:active": {
-      color: "blue",
-      content: "",
-      display: "block",
-      borderBottom: "3px solid",
-      margin: "0 auto",
-    },
+    // "&:active": {
+    //   color: "blue",
+    //   content: "",
+    //   display: "block",
+    //   borderBottom: "3px solid",
+    //   margin: "0 auto",
+    // },
   },
   centerHeader: {
+    position: "relative",
     display: "flex",
-    justifyContent: "center",
+    // justifyContent: "center",
     alignItems: "center",
     textAlign: "center",
     maxWidth: "50%",
@@ -56,6 +57,7 @@ const useStyles = makeStyles({
   headerRight: {
     display: "flex",
     flexDirection: "row",
+    position: "relative",
   },
   rightContent: {
     display: "flex",

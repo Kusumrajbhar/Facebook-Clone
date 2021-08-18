@@ -16,6 +16,10 @@ const useStyles = makeStyles({
     display: "flex",
     alignItems: "center",
     marginLeft: "15px",
+    cursor: "pointer",
+    "&:hover": {
+      background: "#e0e0e0",
+    },
   },
   icons: {
     background: "#e0e0e0",

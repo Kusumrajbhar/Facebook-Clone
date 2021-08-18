@@ -25,15 +25,21 @@ import {
   postData,
 } from "../../datas/Home/HomeData";
 import girl1 from "../../Assets/Images/girl1.jpg";
+import { useHistory } from "react-router";
 
-function Home() {
+function HomeWrapper() {
   const classes = useStyles();
+  const history = useHistory();
+  const profileOfUser = (e) => {
+    e.preventDefault();
+    history.push("/profile");
+  };
   return (
     <Grid container className="main">
       <Grid item lg={3}>
         <Paper className={classes.leftPaper} elevation={0}>
           <div>
-            <div className={classes.userInfo}>
+            <div className={classes.userInfo} onClick={profileOfUser}>
               <span>
                 <Avatar className="iconLetter">K</Avatar>
               </span>
@@ -107,7 +113,7 @@ function Home() {
                 </Button>
               </span>
               <span className="flexDisplay">
-                {createRoom?.map((data, index) => (
+                {createRoom.map((data, index) => (
                   <span key={index} className={classes.marginLeftTen}>
                     <Avatar>{data}</Avatar>
                   </span>
@@ -196,4 +202,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default HomeWrapper;

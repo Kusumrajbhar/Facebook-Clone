@@ -1,17 +1,10 @@
 import { makeStyles } from "@material-ui/styles";
 
 const useStyles = makeStyles({
-  dialog: {
+  dialogPage: {
     height: "750px",
-    position: "absolute",
-    right: "0",
-    top: "30px",
-    //marginLeft: "30px"
-    // display: "flex",
-    // alignItems: "flex-end",
-    // position: "absolute",
-    // left: 0,
-    // top: 50,
+    marginTop: "30px",
+    marginLeft: "60%",
   },
   searchTextField: {
     background: "#eeeeee",
