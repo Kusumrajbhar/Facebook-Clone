@@ -7,9 +7,11 @@ import SearchIcon from "@material-ui/icons/Search";
 import ChatIcon from "@material-ui/icons/Chat";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
-import Avatar from "@material-ui/core/Avatar";
+import { Avatar, Button } from "@material-ui/core";
 import Tooltip from "@material-ui/core/Tooltip";
 import { CgMenuGridO } from "react-icons/cg";
+import { IoIosPartlySunny } from "react-icons/io";
+import { RiSunFill } from "react-icons/ri";
 
 import useStyles from "./styles";
 import MenuModal from "../../component/modals/MenuModal";
@@ -19,7 +21,7 @@ import AccountModal from "../../component/modals/AccountModal";
 import { mainHeaderData } from "../../datas/header/HeaderData";
 import FacebookLogo from "../../Assets/Images/FacebookLogo.png";
 
-const HeaderWrapper = () => {
+const HeaderWrapper = ({ modeChangeHandler, lightModeHandler }) => {
   const classes = useStyles();
   const [menu, setMenu] = useState(false);
   const [messenger, setMessenger] = useState(false);
@@ -82,6 +84,25 @@ const HeaderWrapper = () => {
                 <b>Kusum</b>
               </span>
             </div>
+            {/* <span>
+              <Button
+                startIcon={
+                  <IoIosPartlySunny
+                    size="25"
+                    className={classes.circularIcons}
+                    onClick={modeChangeHandler}
+                  />
+                }
+                endIcon={
+                  <RiSunFill
+                    size="25"
+                    className={classes.circularIcons}
+                    onClick={lightModeHandler}
+                  />
+                }
+              ></Button>
+              <IoIosPartlySunny size="25" className={classes.circularIcons} />
+            </span> */}
             <div className={classes.headerRight}>
               <span onClick={() => setMenu(true)}>
                 <Tooltip title="Menu">

@@ -1,5 +1,6 @@
 :root {
   --backgroundColor: #eceff1;
+  --backgroundDarkColor: #1a1919;
 }
 .App {
   text-align: center;
@@ -24,6 +25,13 @@
   color: white;
 }
 body {
+  background-color: var(--backgroundColor);
+  color: #eeeeee;
+}
+.dark-mode {
+  background-color: var(--backgroundDarkColor);
+}
+.light-mode {
   background-color: var(--backgroundColor);
 }
 .App-link {
@@ -61,6 +69,7 @@ body {
 .main {
   margin-top: 65px;
   padding-top: 15px;
+  text-align: center;
 }
 
 .icons {
@@ -164,3 +173,10 @@ body {
   border-bottom: 3px solid;
   margin: 0 auto;
 }
+.alignDataLeft {
+  align-items: flex-start;
+}
+
+/* .lineGapOfData {
+
+} */

@@ -12,10 +12,10 @@ import useStyles from "./Style";
 function WatchWrapper() {
   const classes = useStyles();
   return (
-    <div className={classes.mainWatch}>
+    <div>
       <Grid container>
         <Grid item lg={2}>
-          <Paper className="paddingAround">
+          <Paper className={classes.watchSideBar}>
             <div>
               <div className={classes.sideBarTop}>
                 <span className={classes.sideBarTitle}>Watch</span>

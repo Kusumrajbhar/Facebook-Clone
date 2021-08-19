@@ -5,6 +5,10 @@ const useStyles = makeStyles({
     background: "#eceff1",
     marginTop: "65px",
   },
+  watchSideBar: {
+    marginTop: "63px",
+    padding: "15px 10px",
+  },
   sideBarTop: {
     display: "flex",
     justifyContent: "space-between",
