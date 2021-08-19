@@ -27,6 +27,10 @@ const HeaderWrapper = ({ modeChangeHandler, lightModeHandler }) => {
   const [messenger, setMessenger] = useState(false);
   const [notification, setNotification] = useState(false);
   const [account, setAccount] = useState(false);
+
+  const profilePic = localStorage.getItem("userImage");
+  console.log(`profilePic`, profilePic);
+
   const closeMenuHandler = () => {
     setMenu(false);
   };
@@ -79,7 +83,14 @@ const HeaderWrapper = ({ modeChangeHandler, lightModeHandler }) => {
 
           <div className={classes.rightContent}>
             <div className={classes.flex}>
-              <Avatar>K</Avatar>
+              <Avatar>
+                <img
+                  src={profilePic}
+                  height="50"
+                  width="50"
+                  alt="profile pic"
+                />
+              </Avatar>
               <span className={classes.name}>
                 <b>Kusum</b>
               </span>

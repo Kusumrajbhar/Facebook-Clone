@@ -6,6 +6,7 @@ const userStyle = makeStyles({
     backgroundAttachment: "fixed",
     padding: "15px",
     marginTop: "60px",
+    textAlign: "center",
   },
   belowData: {
     margin: "2% 20% ",
@@ -15,12 +16,32 @@ const userStyle = makeStyles({
   },
   introPaper: {
     padding: "3%",
+    alignItems: "left",
   },
   lists: {
     display: "flex",
   },
   lineGapOfData: {
     marginTop: "10px",
+  },
+  introData: {
+    marginTop: "3%",
+    fontSize: "18px",
+  },
+  borderRadiusFifty: {
+    borderRadius: "50%",
+  },
+  postCardOver: {
+    textAlign: "center",
+    marginTop: "3%",
+  },
+  userInfoPlace: {
+    display: "flex",
+    alignItems: "center",
+    width: "500px",
+  },
+  RightTopCard: {
+    marginTop: "-6%",
   },
 });
 

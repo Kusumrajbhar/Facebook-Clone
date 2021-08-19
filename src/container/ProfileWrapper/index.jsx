@@ -5,9 +5,12 @@ import girl1 from "../../Assets/Images/girl1.jpg";
 import userStyle from "./ProfileStyle";
 import WhatInMindPage from "../HomeWrapper/WhatInMindPage";
 import { introData } from "../../datas/profile/ProfileData";
+import { globalStyle } from "../../component/globalStyle/GlobalStyle";
+import PostCard from "../HomeWrapper/PostCard";
 
 function ProfileWrapper() {
   const classes = userStyle();
+  const globalClass = globalStyle();
   const [userProfileImage, setUserProfileImage] = useState();
   const [localImage, setLocalImage] = useState(undefined);
 
@@ -24,11 +27,17 @@ function ProfileWrapper() {
   }, [userProfileImage]);
 
   return (
-    <div className="alignDataLeft">
+    <div className={globalClass.alignContentLeft}>
       <Paper className={classes.imageBackground}>
-        <img src={localImage && localImage} height="300" width="300" alt="" />
+        <img
+          className="App"
+          src={localImage && localImage}
+          height="300"
+          width="300"
+          alt=""
+        />
         <div className="flexWithCenterJustify">
-          <span style={{ width: "500px" }} className="flexWithCenter">
+          <span className={classes.userInfoPlace}>
             <span style={{ borderRadius: "50%" }} className="iconLetter">
               <img
                 src={localImage && localImage}
@@ -43,7 +52,7 @@ function ProfileWrapper() {
           </span>
           <Button variant="contained" color="primary" component="label">
             <input
-              style={{ padding: "5%" }}
+              className={globalClass.paddingFive}
               type="file"
               onChange={uploadProfileImageHandler}
               hidden
@@ -60,26 +69,53 @@ function ProfileWrapper() {
               <Button color="action" variant="contained" fullWidth>
                 Add Bio
               </Button>
+
               {introData.map((data, index) => (
-                <div className={classes.lineGapOfData} key={index}>
-                  <span className="marginRightTen">{data.icon}</span>
-                  <span>{data.info}</span>
+                <div className={classes.introData} key={index}>
+                  <span className={globalClass.alignContentLeft}>
+                    <span className={globalClass.marginRightTen}>
+                      {data.icon}
+                    </span>
+                    <span>{data.info}</span>
+                  </span>
                 </div>
               ))}
 
-              <Button color="action" variant="contained" fullWidth>
+              <Button
+                color="action"
+                variant="contained"
+                className={globalClass.marginTopTen}
+                fullWidth
+              >
                 Edit Details
               </Button>
-              <Button color="action" variant="contained" fullWidth>
+              <Button
+                color="action"
+                variant="contained"
+                className={globalClass.marginTopTen}
+                fullWidth
+              >
                 Add Hobbies
               </Button>
-              <Button color="action" variant="contained" fullWidth>
+              <Button
+                color="action"
+                variant="contained"
+                className={globalClass.marginTopTen}
+                fullWidth
+              >
                 Add Featured
               </Button>
             </Paper>
+
+            <Paper></Paper>
           </Grid>
           <Grid item lg={6}>
-            <WhatInMindPage />
+            <div className={classes.RightTopCard}>
+              <WhatInMindPage />
+              <div className={classes.postCardOver}>
+                <PostCard />
+              </div>
+            </div>
           </Grid>
         </Grid>
       </div>

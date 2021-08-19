@@ -25,7 +25,7 @@ import { IoGameController } from "react-icons/io5";
 import { FcGallery } from "react-icons/fc";
 import { TiWeatherPartlySunny } from "react-icons/ti";
 import BookmarkIcon from "@material-ui/icons/Bookmark";
-//import useStyles from "../../component/modals/StylesModal";
+
 import girl1 from "../../Assets/Images/girl1.jpg";
 import girl2 from "../../Assets/Images/girl2.jpg";
 import boy1 from "../../Assets/Images/boy1.jpg";
@@ -316,14 +316,14 @@ const createRoom = [
 const postData = [
   {
     name: "Shraddha",
-    profileImage: boy1,
+    profileImage: girl2,
     post: nature,
     commenter: "Kusum",
     Comment: "Awesome",
   },
   {
     name: "Kusum",
-    profileImage: girl2,
+    profileImage: girl1,
     post: girl2,
     commenter: "Shraddha",
     Comment: "nice one",

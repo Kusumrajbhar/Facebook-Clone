@@ -47,7 +47,7 @@ function App() {
 
   return (
     // <div className={darkMode ? "dark-mode" : "light-mode"}>
-    <div>
+    <div className="App">
       {/* <ThemeProvider theme={theme}>
         <CssBaseline /> */}
       <Router>

@@ -5,11 +5,9 @@ import useStyles from "./Styles";
 import ProfileSideBar from "./ProfileSideBar";
 import ContactSideBar from "./ContactSideBar";
 import PostsAndStories from "./PostsAndStories";
-import { myStyle } from "../../component/style/MyStyle";
 
 function HomeWrapper() {
   const classes = useStyles();
-  const globalStyle = myStyle();
 
   return (
     <Grid container className="main">

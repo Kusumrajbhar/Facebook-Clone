@@ -7,11 +7,14 @@ import EmojiEmotionsIcon from "@material-ui/icons/EmojiEmotions";
 import girl1 from "../../Assets/Images/girl1.jpg";
 
 function WhatInMindPage() {
+  const profilePic = localStorage.getItem("userImage");
+  console.log(`profilePic`, profilePic);
+
   return (
     <Paper className="marginTopWithPadding">
       <div className="flexDisplay">
         <Avatar className="iconLetter">
-          <img src={girl1} height="50px" width="50px" alt="" />
+          <img src={profilePic} height="50" width="50" alt="profile pic" />
         </Avatar>
         <InputBase
           className="inputFieldStyle"
