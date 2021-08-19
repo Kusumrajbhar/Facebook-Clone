@@ -1,12 +1,14 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import HomeWrapper from "./container/HomeWrapper";
 import "./App.css";
+//import "./component/StyleComoonent/color.scss";
 import ProfileWrapper from "./container/ProfileWrapper";
 import GamingWrapper from "./container/GamingWrapper";
 import WatchWrapper from "./container/WatchWrapper";
 import GroupWrapper from "./container/GroupWrapper";
 import MarketPlaceWrapper from "./container/MarketWrapper";
 import HeaderWrapper from "./container/HeaderWrapper";
+import Check from "./container/check";
 
 function App() {
   return (
@@ -20,6 +22,7 @@ function App() {
           <Route exact path="/group" component={GroupWrapper} />
           <Route exact path="/gaming" component={GamingWrapper} />
           <Route exact path="/profile" component={ProfileWrapper} />
+          <Route exact path="/check" component={Check} />
         </Switch>
       </Router>
     </div>

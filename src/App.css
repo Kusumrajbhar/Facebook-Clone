@@ -13,7 +13,6 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -24,11 +23,12 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+body {
+  background-color: var(--backgroundColor);
+}
 .App-link {
   color: #61dafb;
 }
-
 /* a:hover {
   color: blue;
   content: "";
@@ -59,7 +59,6 @@
   }
 }
 .main {
-  background-color: var(--backgroundColor);
   margin-top: 65px;
   padding-top: 15px;
 }
