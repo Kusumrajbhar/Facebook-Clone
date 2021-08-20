@@ -6,7 +6,6 @@ import {
   CardHeader,
   CardMedia,
   Grid,
-  IconButton,
   InputBase,
   ListItem,
   ListItemIcon,
@@ -16,16 +15,23 @@ import {
 } from "@material-ui/core";
 import React from "react";
 import { RiSettings5Fill, RiLiveFill } from "react-icons/ri";
-import { MdOndemandVideo } from "react-icons/md";
 import SearchIcon from "@material-ui/icons/Search";
-import HomeIcon from "@material-ui/icons/Home";
-import { BiMovie } from "react-icons/bi";
-import { HiSave } from "react-icons/hi";
+import { FaRegCommentAlt } from "react-icons/fa";
+import {
+  AiOutlineLike,
+  AiOutlineHeart,
+  AiFillLike,
+  AiTwotoneHeart,
+} from "react-icons/ai";
 import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
+import { RiShareForwardLine } from "react-icons/ri";
+import { BiLaugh } from "react-icons/bi";
 
 import watchStyles from "./Style";
 import { sideBarLower, sideBarUpperHalf } from "../../datas/watch/WatchData";
 import { globalStyle } from "../../component/globalStyle/GlobalStyle";
+import Sea from "../../Assets/Videos/Sea.mp4";
+import { cardData } from "../../datas/profile/ProfileData";
 
 function WatchWrapper() {
   const classes = watchStyles();
@@ -33,7 +39,7 @@ function WatchWrapper() {
   return (
     <div>
       <Grid container>
-        <Grid item lg={3}>
+        <Grid item lg={3} sm={12} md={3}>
           <Paper className={classes.watchSideBar}>
             <div>
               <div className={classes.sideBarTop}>
@@ -78,53 +84,103 @@ function WatchWrapper() {
             </div>
           </Paper>
         </Grid>
-        <Grid item className={classes.centralContent} lg={9}>
-          <Paper className={classes.cardMain}>
-            <div className={classes.cardHeader}>
-              <span className={globalClass.flexCenter}>
-                <span className={globalClass.marginRightTen}>
-                  <Avatar>R</Avatar>
+        <Grid item className={classes.centralContent} lg={9} sm={12} md={9}>
+          {cardData.map((data, index) => (
+            <Paper key={index} className={classes.cardMain}>
+              <div className={globalClass.lineHeightOne}>
+                <div className={classes.cardHeader}>
+                  <span className={globalClass.flexCenter}>
+                    <span className={globalClass.marginRightTen}>
+                      <Avatar>
+                        <img
+                          src={data.image}
+                          className={globalClass.heightWidth}
+                          alt="channel"
+                        />
+                      </Avatar>
+                    </span>
+                    <span className={classes.title}>
+                      <h3>{data.Title}</h3>
+                      <p>{data.subTitle}</p>
+                    </span>
+                  </span>
+                  <span>
+                    <MoreHorizIcon />
+                  </span>
+                </div>
+
+                <Typography className={classes.subTitle}>
+                  {data.info}
+                </Typography>
+                <Typography className={classes.subTitleDetail}>
+                  {data.subInfo}
+                </Typography>
+              </div>
+
+              <div className={globalClass.marginTopTen}>
+                <video
+                  autoPlay={true}
+                  loop={true}
+                  playsInline={true}
+                  controls
+                  muted
+                  className={classes.videoWidth}
+                >
+                  <source src={data.video} type="video/mp4" />
+                </video>
+              </div>
+
+              <div className={classes.footer}>
+                <span className={globalClass.flex}>
+                  <span className={classes.iconButtons}>
+                    <AiOutlineLike
+                      size="20"
+                      className={globalClass.marginRightThree}
+                    />
+                    <span>Like</span>
+                  </span>
+                  <span className={classes.iconButtons}>
+                    <FaRegCommentAlt
+                      size="15"
+                      className={globalClass.marginRightThree}
+                    />
+                    <span>Comment</span>
+                  </span>
+                  <span className={classes.iconButtons}>
+                    <RiShareForwardLine
+                      size="20"
+                      className={globalClass.marginRightThree}
+                    />
+                    <span>Share</span>
+                  </span>
                 </span>
-                <span className={globalClass.lineHeightOne}>
-                  <h3>Heading</h3>
-                  <p>Paragraph</p>
+                <span className={globalClass.flexCenter}>
+                  <span className={globalClass.marginRightTen}>
+                    <span>
+                      <AiFillLike
+                        size="15px"
+                        color="white"
+                        className={classes.like}
+                      />
+                    </span>
+                    <span>
+                      <AiTwotoneHeart
+                        size="15px"
+                        color="white"
+                        className={classes.heart}
+                      />
+                    </span>
+                    <span>
+                      <BiLaugh size="15px" className={classes.laugh} />
+                    </span>
+                  </span>
+                  <Typography className={globalClass.fontSizeFourteen}>
+                    {data.likes}
+                  </Typography>
                 </span>
-              </span>
-              <span>
-                <MoreHorizIcon />
-              </span>
-            </div>
-            <h3>Info</h3>
-            <div>
-              <span>hello</span>
-            </div>
-            {/* <CardHeader
-              avatar={
-                <Avatar aria-label="recipe" className={classes.avatar}>
-                  R
-                </Avatar>
-              }
-              title="Shrimp and Chorizo Paella"
-              subheader="September 14, 2016"
-              action={
-                <IconButton>
-                  <MoreHorizIcon />
-                </IconButton>
-              }
-            />
-            <CardMedia
-              className={classes.media}
-              image="/static/images/cards/paella.jpg"
-              title="Paella dish"
-            />
-            <CardContent>
-              <Typography variant="body2" color="textSecondary" component="p">
-                This impressive paella is a perfect party dish and a fun meal to
-                cook together with your guests. Add 1 cup of frozen peas along
-                with the mussels, if you like.
-              </Typography>
-            </CardContent> */}
-          </Paper>
+              </div>
+            </Paper>
+          ))}
         </Grid>
       </Grid>
     </div>

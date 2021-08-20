@@ -1,6 +1,9 @@
 import { makeStyles } from "@material-ui/core";
 
 export const globalStyle = makeStyles(() => ({
+  flex: {
+    display: "flex",
+  },
   textColor: {
     color: "red",
   },
@@ -31,5 +34,18 @@ export const globalStyle = makeStyles(() => ({
   },
   lineHeightOne: {
     lineHeight: "1px",
+  },
+  marginRightThree: {
+    marginRight: "3%",
+  },
+  marginLeft: {
+    marginLeft: "12px",
+  },
+  fontSizeFourteen: {
+    fontSize: "14px",
+  },
+  heightWidth: {
+    height: "50px",
+    width: "50px",
   },
 }));

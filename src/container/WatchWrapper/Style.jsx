@@ -8,9 +8,10 @@ const watchStyles = makeStyles({
   cardMain: {
     marginTop: "65px",
     paddingTop: "15px",
+    padding: "10px",
   },
   cardHeader: {
-    padding: "10px",
+    //padding: "10px",
     display: "flex",
     justifyContent: "space-between",
   },
@@ -45,6 +46,55 @@ const watchStyles = makeStyles({
     paddingTop: "23px ",
     paddingLeft: "150px",
     paddingRight: "180px",
+  },
+  subTitle: {
+    textAlign: "left",
+    //paddingLeft: "10px",
+    fontWeight: "bold",
+  },
+  subTitleDetail: {
+    textAlign: "left",
+  },
+  marginLeft: {
+    marginLeft: "12px",
+  },
+  iconButtons: {
+    display: "flex",
+    alignItems: "center",
+    marginLeft: "22px",
+    padding: "6px 14px",
+    borderRadius: "4px",
+    cursor: "pointer",
+    "&:hover": {
+      background: "rgb(245,245,245)",
+    },
+  },
+  like: {
+    background: "rgb(31, 81, 255)",
+    padding: "3px",
+    borderRadius: "50%",
+  },
+  heart: {
+    background: "red",
+    padding: "3px",
+    borderRadius: "50%",
+  },
+  laugh: {
+    background: " #FFC300",
+    padding: "3px",
+    borderRadius: "50%",
+  },
+  footer: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
+  },
+  title: {
+    lineHeight: "1px",
+    textAlign: "left",
+  },
+  videoWidth: {
+    width: "80%",
   },
 });
 
