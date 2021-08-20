@@ -7,7 +7,7 @@ import menuModalData from "../../datas/MenuModal/MenuModalData";
 
 function MenuModal({ open, onClose }) {
   const classes = useStyles();
-  //const [scroll, setScroll] = React.useState("paper");
+
   return (
     <Dialog
       onClose={onClose}

@@ -1,13 +1,24 @@
 import { makeStyles } from "@material-ui/core";
 
-const useStyles = makeStyles({
+const watchStyles = makeStyles({
   mainWatch: {
     background: "#eceff1",
     marginTop: "65px",
   },
+  cardMain: {
+    marginTop: "65px",
+    paddingTop: "15px",
+  },
+  cardHeader: {
+    padding: "10px",
+    display: "flex",
+    justifyContent: "space-between",
+  },
   watchSideBar: {
     marginTop: "63px",
-    padding: "15px 10px",
+    padding: "10px 10px",
+    width: "330px",
+    position: "fixed",
   },
   sideBarTop: {
     display: "flex",
@@ -18,8 +29,6 @@ const useStyles = makeStyles({
     fontSize: "24px",
   },
   topIconSize: {
-    height: 25,
-    width: 25,
     background: "#e0e0e0",
     padding: "5px",
     borderRadius: "50%",
@@ -32,6 +41,11 @@ const useStyles = makeStyles({
     display: "flex",
     flexDirection: "start",
   },
+  centralContent: {
+    paddingTop: "23px ",
+    paddingLeft: "150px",
+    paddingRight: "180px",
+  },
 });
 
-export default useStyles;
+export default watchStyles;

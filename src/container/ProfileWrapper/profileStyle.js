@@ -1,7 +1,8 @@
 import { makeStyles } from "@material-ui/core";
 const userStyle = makeStyles({
   imageBackground: {
-    background: "linear-gradient(#bdbdbd 30% , #e0e0e0, #f5f5f5, #fafafa)",
+    background:
+      "linear-gradient(#bdbdbd 10% , #e0e0e0, #f5f5f5, #fafafa, #ffffff 30%)",
     backgroundRepeat: "no-repeat",
     backgroundAttachment: "fixed",
     padding: "15px",

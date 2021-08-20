@@ -16,4 +16,20 @@ export const globalStyle = makeStyles(() => ({
   paddingFive: {
     padding: "5%",
   },
+  scrolling: {
+    overflow: "scroll",
+    height: "80vh",
+  },
+  main: {
+    marginTop: "65px",
+    paddingTop: "15px",
+    textAlign: "center",
+  },
+  flexCenter: {
+    display: "flex",
+    alignItems: "center",
+  },
+  lineHeightOne: {
+    lineHeight: "1px",
+  },
 }));

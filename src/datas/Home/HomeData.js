@@ -25,7 +25,6 @@ import { IoGameController } from "react-icons/io5";
 import { FcGallery } from "react-icons/fc";
 import { TiWeatherPartlySunny } from "react-icons/ti";
 import BookmarkIcon from "@material-ui/icons/Bookmark";
-
 import girl1 from "../../Assets/Images/girl1.jpg";
 import girl2 from "../../Assets/Images/girl2.jpg";
 import boy1 from "../../Assets/Images/boy1.jpg";
