@@ -4,7 +4,7 @@ import { Grid, InputBase, Avatar, Paper, Button } from "@material-ui/core";
 import girl1 from "../../Assets/Images/girl1.jpg";
 import userStyle from "./ProfileStyle";
 import WhatInMindPage from "../HomeWrapper/WhatInMindPage";
-import { introData } from "../../datas/profile/ProfileData";
+import { introData } from "../../datas/Profile/ProfileData";
 import { globalStyle } from "../../component/globalStyle/GlobalStyle";
 import PostCard from "../HomeWrapper/PostCard";
 

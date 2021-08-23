@@ -21,23 +21,6 @@ const watchStyles = makeStyles({
     width: "330px",
     position: "fixed",
   },
-  sideBarTop: {
-    display: "flex",
-    justifyContent: "space-between",
-  },
-  sideBarTitle: {
-    fontWeight: "bold",
-    fontSize: "24px",
-  },
-  topIconSize: {
-    background: "#e0e0e0",
-    padding: "5px",
-    borderRadius: "50%",
-    color: "#000000",
-    marginLeft: "8px",
-    cursor: "pointer",
-    marginRight: "10px",
-  },
   marginRightAuto: {
     display: "flex",
     flexDirection: "start",

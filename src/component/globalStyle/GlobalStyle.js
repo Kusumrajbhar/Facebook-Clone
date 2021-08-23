@@ -7,6 +7,9 @@ export const globalStyle = makeStyles(() => ({
   textColor: {
     color: "red",
   },
+  blueColor: {
+    color: "blue",
+  },
   marginTopTen: {
     marginTop: "10px",
   },
@@ -19,9 +22,10 @@ export const globalStyle = makeStyles(() => ({
   paddingFive: {
     padding: "5%",
   },
-  scrolling: {
+  sidebarScrolling: {
     overflow: "scroll",
     height: "80vh",
+    paddingBottom: "20px",
   },
   main: {
     marginTop: "65px",
@@ -47,5 +51,29 @@ export const globalStyle = makeStyles(() => ({
   heightWidth: {
     height: "50px",
     width: "50px",
+  },
+  sideBarTop: {
+    display: "flex",
+    justifyContent: "space-between",
+    padding: "7px",
+  },
+  sideBarTitle: {
+    fontWeight: "bold",
+    fontSize: "24px",
+  },
+  sidebarIconSize: {
+    background: "#e0e0e0",
+    padding: "5px",
+    borderRadius: "50%",
+    color: "#000000",
+    marginLeft: "8px",
+    cursor: "pointer",
+    marginRight: "10px",
+  },
+  inputFieldStyle: {
+    background: "#eeeeee",
+    borderRadius: "25px",
+    width: "100%",
+    padding: "3px 10px",
   },
 }));

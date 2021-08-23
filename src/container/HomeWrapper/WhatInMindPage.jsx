@@ -5,19 +5,21 @@ import InsertPhotoIcon from "@material-ui/icons/InsertPhoto";
 import EmojiEmotionsIcon from "@material-ui/icons/EmojiEmotions";
 
 import girl1 from "../../Assets/Images/girl1.jpg";
+import { globalStyle } from "../../component/globalStyle/GlobalStyle";
 
 function WhatInMindPage() {
+  const globalClass = globalStyle();
   const profilePic = localStorage.getItem("userImage");
   console.log(`profilePic`, profilePic);
 
   return (
     <Paper className="marginTopWithPadding">
-      <div className="flexDisplay">
+      <div className={globalClass.flex}>
         <Avatar className="iconLetter">
           <img src={profilePic} height="50" width="50" alt="profile pic" />
         </Avatar>
         <InputBase
-          className="inputFieldStyle"
+          className={globalClass.inputFieldStyle}
           placeholder="What's on your mind, Kusum?"
           size="large"
         />

@@ -3,7 +3,7 @@ import { Avatar, Grid, Paper, Button, InputBase } from "@material-ui/core";
 
 import VideoCallIcon from "@material-ui/icons/VideoCall";
 
-import useStyles from "./Styles";
+import useStyles from "./StyleHome";
 import { storyData, createRoom } from "../../datas/Home/HomeData";
 import girl1 from "../../Assets/Images/girl1.jpg";
 import WhatInMindPage from "./WhatInMindPage";

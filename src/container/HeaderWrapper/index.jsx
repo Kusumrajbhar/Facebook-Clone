@@ -18,7 +18,7 @@ import MenuModal from "../../component/modals/MenuModal";
 import MessengerModal from "../../component/modals/MessengerModal";
 import NotificationModal from "../../component/modals/NotificationModal";
 import AccountModal from "../../component/modals/AccountModal";
-import { mainHeaderData } from "../../datas/header/HeaderData";
+import { mainHeaderData } from "../../datas/Header/HeaderData";
 import FacebookLogo from "../../Assets/Images/FacebookLogo.png";
 
 const HeaderWrapper = ({ modeChangeHandler, lightModeHandler }) => {

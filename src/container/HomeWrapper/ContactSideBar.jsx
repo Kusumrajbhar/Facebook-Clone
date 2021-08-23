@@ -1,7 +1,7 @@
 import React from "react";
 import { Paper } from "@material-ui/core";
 
-import useStyles from "./Styles";
+import useStyles from "./StyleHome";
 import { contact } from "../../datas/Home/HomeData";
 
 function ContactSideBar() {

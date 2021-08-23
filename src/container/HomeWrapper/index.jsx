@@ -1,7 +1,7 @@
 import React from "react";
 import { Grid } from "@material-ui/core";
 
-import useStyles from "./Styles";
+import useStyles from "./StyleHome";
 import ProfileSideBar from "./ProfileSideBar";
 import ContactSideBar from "./ContactSideBar";
 import PostsAndStories from "./PostsAndStories";

@@ -8,7 +8,7 @@ import {
 } from "@material-ui/core";
 import { useHistory } from "react-router";
 
-import useStyles from "./Styles";
+import useStyles from "./StyleHome";
 import { homeLeftData } from "../../datas/Home/HomeData";
 
 function ProfileSideBar() {

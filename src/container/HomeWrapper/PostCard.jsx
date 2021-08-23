@@ -7,10 +7,12 @@ import { FiSmile } from "react-icons/fi";
 import girl1 from "../../Assets/Images/girl1.jpg";
 
 import { postData } from "../../datas/Home/HomeData";
-import useStyles from "./Styles";
+import useStyles from "./StyleHome";
+import { globalStyle } from "../../component/globalStyle/GlobalStyle";
 
 function PostCard() {
   const classes = useStyles();
+  const globalClass = globalStyle();
   return (
     <div>
       {postData?.map((data, index) => (
@@ -62,7 +64,7 @@ function PostCard() {
                 />
               </Avatar>
               <InputBase
-                className="inputFieldStyle"
+                className={globalClass.inputFieldStyle}
                 placeholder="Write a comment..."
                 endAdornment={<FiSmile />}
               />

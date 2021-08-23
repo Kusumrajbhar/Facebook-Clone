@@ -1,10 +1,6 @@
+import React from "react";
 import {
   Avatar,
-  Card,
-  CardActions,
-  CardContent,
-  CardHeader,
-  CardMedia,
   Grid,
   InputBase,
   ListItem,
@@ -13,25 +9,18 @@ import {
   Paper,
   Typography,
 } from "@material-ui/core";
-import React from "react";
-import { RiSettings5Fill, RiLiveFill } from "react-icons/ri";
+import { RiSettings5Fill } from "react-icons/ri";
 import SearchIcon from "@material-ui/icons/Search";
 import { FaRegCommentAlt } from "react-icons/fa";
-import {
-  AiOutlineLike,
-  AiOutlineHeart,
-  AiFillLike,
-  AiTwotoneHeart,
-} from "react-icons/ai";
+import { AiOutlineLike, AiFillLike, AiTwotoneHeart } from "react-icons/ai";
 import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
 import { RiShareForwardLine } from "react-icons/ri";
 import { BiLaugh } from "react-icons/bi";
 
 import watchStyles from "./Style";
-import { sideBarLower, sideBarUpperHalf } from "../../datas/watch/WatchData";
+import { sideBarLower, sideBarUpperHalf } from "../../datas/Watch/WatchData";
 import { globalStyle } from "../../component/globalStyle/GlobalStyle";
-import Sea from "../../Assets/Videos/Sea.mp4";
-import { cardData } from "../../datas/profile/ProfileData";
+import { cardData } from "../../datas/Profile/ProfileData";
 
 function WatchWrapper() {
   const classes = watchStyles();
@@ -41,26 +30,30 @@ function WatchWrapper() {
       <Grid container>
         <Grid item lg={3} sm={12} md={3}>
           <Paper className={classes.watchSideBar}>
-            <div>
-              <div className={classes.sideBarTop}>
-                <span className={classes.sideBarTitle}>Watch</span>
-                <span>
-                  <RiSettings5Fill className={classes.topIconSize} />
-                </span>
-              </div>
-              <InputBase
-                className="inputFieldStyle"
-                startAdornment={<SearchIcon color="action" />}
-                placeholder="Search Videos"
-              />
+            <div className={globalClass.sideBarTop}>
+              <span className={globalClass.sideBarTitle}>Watch</span>
+              <span>
+                <RiSettings5Fill
+                  size="25"
+                  className={globalClass.sidebarIconSize}
+                />
+              </span>
             </div>
+            <InputBase
+              className={globalClass.inputFieldStyle}
+              startAdornment={<SearchIcon color="action" />}
+              placeholder="Search Videos"
+            />
+
             <hr />
-            <div className={globalClass.scrolling}>
+            <div className={globalClass.sidebarScrolling}>
               <div>
                 {sideBarUpperHalf.map((data, index) => (
                   <ListItem button key={index}>
                     <ListItemIcon>
-                      <span className={classes.topIconSize}>{data.icon}</span>
+                      <span className={globalClass.sidebarIconSize}>
+                        {data.icon}
+                      </span>
                     </ListItemIcon>
                     <ListItemText>
                       <b>{data.text}</b>
