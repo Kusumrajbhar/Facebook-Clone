@@ -25,7 +25,6 @@ export const globalStyle = makeStyles(() => ({
   sidebarScrolling: {
     overflow: "scroll",
     height: "80vh",
-    paddingBottom: "20px",
   },
   main: {
     marginTop: "65px",
@@ -41,6 +40,9 @@ export const globalStyle = makeStyles(() => ({
   },
   marginRightThree: {
     marginRight: "3%",
+  },
+  marginBottomTwenty: {
+    marginBottom: "20px",
   },
   marginLeft: {
     marginLeft: "12px",

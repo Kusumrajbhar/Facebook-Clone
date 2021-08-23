@@ -9,7 +9,6 @@ import WatchWrapper from "./container/WatchWrapper";
 import GroupWrapper from "./container/GroupWrapper";
 import MarketWrapper from "./container/MarketWrapper";
 import HeaderWrapper from "./container/HeaderWrapper";
-import Check from "./container/check";
 
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { createTheme, ThemeProvider } from "@material-ui/core/styles";
@@ -61,7 +60,6 @@ function App() {
           <Route exact path="/group" component={GroupWrapper} />
           <Route exact path="/gaming" component={GamingWrapper} />
           <Route exact path="/profile" component={ProfileWrapper} />
-          <Route exact path="/check" component={Check} />
         </Switch>
       </Router>
       {/* </ThemeProvider> */}
