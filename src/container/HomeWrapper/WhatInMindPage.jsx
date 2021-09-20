@@ -4,18 +4,16 @@ import VideoCallIcon from "@material-ui/icons/VideoCall";
 import InsertPhotoIcon from "@material-ui/icons/InsertPhoto";
 import EmojiEmotionsIcon from "@material-ui/icons/EmojiEmotions";
 
-import girl1 from "../../Assets/Images/girl1.jpg";
 import { globalStyle } from "../../component/globalStyle/GlobalStyle";
 
 function WhatInMindPage() {
   const globalClass = globalStyle();
   const profilePic = localStorage.getItem("userImage");
-  console.log(`profilePic`, profilePic);
 
   return (
-    <Paper className="marginTopWithPadding">
+    <Paper className={globalClass.marginTopWithPadding}>
       <div className={globalClass.flex}>
-        <Avatar className="iconLetter">
+        <Avatar className={globalClass.marginRightTwelve}>
           <img src={profilePic} height="50" width="50" alt="profile pic" />
         </Avatar>
         <InputBase
@@ -25,22 +23,22 @@ function WhatInMindPage() {
         />
       </div>
       <hr />
-      <Grid container className="flexWithCenterJustify" spacing={0}>
-        <Grid item lg={4} className="flexWithCenterJustify">
+      <Grid container className={globalClass.flexWithCenterJustify} spacing={0}>
+        <Grid item lg={4} className={globalClass.flexWithCenterJustify}>
           <span>
             <VideoCallIcon color="secondary" style={{ marginRight: "7px" }} />
           </span>
           Live Video
         </Grid>
-        <Grid item lg={4} className="flexWithCenterJustify">
+        <Grid item lg={4} className={globalClass.flexWithCenterJustify}>
           <span>
-            <InsertPhotoIcon className="greenColor" />
+            <InsertPhotoIcon className={globalClass.greenColor} />
           </span>
           Photo/Video
         </Grid>
-        <Grid item lg={4} className="flexWithCenterJustify">
+        <Grid item lg={4} className={globalClass.flexWithCenterJustify}>
           <span>
-            <EmojiEmotionsIcon className="orangeColor" />
+            <EmojiEmotionsIcon className={globalClass.orangeColor} />
           </span>
           Feeling/Activity
         </Grid>

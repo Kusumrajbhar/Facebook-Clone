@@ -5,7 +5,7 @@ import {
   FaHandHoldingHeart,
   FaFacebookMessenger,
 } from "react-icons/fa";
-import { GrGroup } from "react-icons/gr";
+import { GrGroup, GrFormNext } from "react-icons/gr";
 import { ImHome } from "react-icons/im";
 import { MdOndemandVideo, MdEvent } from "react-icons/md";
 import { BsClockHistory, BsFillStarFill } from "react-icons/bs";
@@ -145,6 +145,10 @@ const homeLeftData = [
   },
   {
     icon: <TiWeatherPartlySunny color="orange" size="30" />,
+    label: "Weather ",
+  },
+  {
+    icon: <GrFormNext color="orange" size="30" />,
     label: "Weather ",
   },
 ];

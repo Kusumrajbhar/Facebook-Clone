@@ -10,9 +10,11 @@ import { useHistory } from "react-router";
 
 import useStyles from "./StyleHome";
 import { homeLeftData } from "../../datas/Home/HomeData";
+import { globalStyle } from "../../component/globalStyle/GlobalStyle";
 
 function ProfileSideBar() {
   const classes = useStyles();
+  const globalClass = globalStyle();
   const history = useHistory();
   const profileOfUser = (e) => {
     e.preventDefault();
@@ -23,7 +25,7 @@ function ProfileSideBar() {
       <div>
         <div className={classes.userInfo} onClick={profileOfUser}>
           <span>
-            <Avatar className="iconLetter">K</Avatar>
+            <Avatar className={globalClass.marginRightTwelve}>K</Avatar>
           </span>
           <p>Kusum</p>
         </div>

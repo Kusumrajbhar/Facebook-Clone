@@ -18,7 +18,7 @@ function PostCard() {
       {postData?.map((data, index) => (
         <Paper key={index} className={classes.marginBottomThree}>
           <div className={classes.flexWithPaddingThree}>
-            <Avatar className="iconLetter">
+            <Avatar className={globalClass.marginRightTwelve}>
               <img src={data.profileImage} height="50px" width="50px" alt="" />
             </Avatar>
             {data.name}
@@ -28,23 +28,29 @@ function PostCard() {
           </div>
           <div className={classes.paddingTwoFive}>
             <hr />
-            <Grid container className="flexWithCenterJustify">
-              <Grid item lg={3} className="flexWithCenter">
-                <ThumbUpAltOutlinedIcon className="marginRightTen" /> Like
+            <Grid container className={globalClass.flexWithCenterJustify}>
+              <Grid item lg={3} className={globalClass.flexCenter}>
+                <ThumbUpAltOutlinedIcon
+                  className={globalClass.marginRightTen}
+                />{" "}
+                Like
               </Grid>
-              <Grid item lg={3} className="flexWithCenter">
-                <ChatBubbleOutlineOutlinedIcon className="marginRightTen" />
+              <Grid item lg={3} className={globalClass.flexCenter}>
+                <ChatBubbleOutlineOutlinedIcon
+                  className={globalClass.marginRightTen}
+                />
                 Comment
               </Grid>
-              <Grid item lg={3} className="flexWithCenter">
-                <RiShareForwardLine className="marginRightTen" /> Share
+              <Grid item lg={3} className={globalClass.flexCenter}>
+                <RiShareForwardLine className={globalClass.marginRightTen} />{" "}
+                Share
               </Grid>
             </Grid>
             <hr />
-            <div className="flexStartColumn">
+            <div className={globalClass.flexStartColumn}>
               <h4>Comments</h4>
               <div className={classes.flexWithMarginTwo}>
-                <Avatar className="iconLetter">
+                <Avatar className={globalClass.marginRightTwelve}>
                   <img src={girl1} height="50px" width="50px" alt="" />
                 </Avatar>
                 <span className={classes.fontFourteen}>
@@ -54,8 +60,8 @@ function PostCard() {
                 </span>
               </div>
             </div>
-            <div className="flexWithCenter">
-              <Avatar className="iconLetter">
+            <div className={globalClass.flexCenter}>
+              <Avatar className={globalClass.marginRightTwelve}>
                 <img
                   src={data.profileImage}
                   height="50px"

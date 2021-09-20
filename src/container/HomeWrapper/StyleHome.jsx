@@ -69,6 +69,11 @@ const useStyles = makeStyles({
   marginLeftTen: {
     marginLeft: "10px",
   },
+  purpleColor: {
+    color: "purple",
+    marginRight: "7px",
+    size: "80",
+  },
 });
 
 export default useStyles;

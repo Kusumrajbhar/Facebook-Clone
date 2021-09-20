@@ -11,16 +11,22 @@ import MarketWrapper from "./container/MarketWrapper";
 import HeaderWrapper from "./container/HeaderWrapper";
 
 import useMediaQuery from "@material-ui/core/useMediaQuery";
-import { createTheme, ThemeProvider } from "@material-ui/core/styles";
+import {
+  createMuiTheme,
+  createTheme,
+  ThemeProvider,
+} from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 
 function App() {
+  //manual test
   // const [darkMode, setDarkMode] = useState(true);
 
   // const modeChangeHandler = () => {
   //   setDarkMode(!darkMode);
   // };
 
+  //first test
   // const [mode, setMode] = useState();
 
   // const prefersDarkMode = useMediaQuery(`(prefers-color-scheme: ${mode})`);
@@ -43,16 +49,36 @@ function App() {
   //   setMode(darkMode ? "dark" : "light");
   // };
 
+  //second test
+  // const [darkState, setDarkState] = useState(false);
+  // const palletType = darkState ? "dark" : "light";
+  // const darkTheme = createMuiTheme({
+  //   palette: {
+  //     type: palletType,
+  //   },
+  // });
+  // const handleThemeChange = () => {
+  //   setDarkState(!darkState);
+  // };
+
   return (
+    // manual try
     // <div className={darkMode ? "dark-mode" : "light-mode"}>
+
     <div className="App">
-      {/* <ThemeProvider theme={theme}>
-        <CssBaseline /> */}
+      {/* first provider */}
+      {/* <ThemeProvider theme={darkTheme}> */}
+      {/* <ThemeProvider theme={theme}> */}
+      {/* <CssBaseline /> */}
       <Router>
-        <HeaderWrapper
-        // modeChangeHandler={modeHandler}
-        // lightModeHandler={lightModeHandler}
-        />
+        {/* <HeaderWrapper
+            modeChangeHandler={modeHandler}
+            lightModeHandler={lightModeHandler}
+          /> */}
+
+        {/* wrapper of second */}
+        {/* <HeaderWrapper modeChangeHandler={handleThemeChange} /> */}
+        <HeaderWrapper />
         <Switch>
           <Route exact path="/" component={HomeWrapper} />
           <Route exact path="/watch" component={WatchWrapper} />
@@ -62,6 +88,7 @@ function App() {
           <Route exact path="/profile" component={ProfileWrapper} />
         </Switch>
       </Router>
+      {/* </ThemeProvider> */}
       {/* </ThemeProvider> */}
     </div>
   );

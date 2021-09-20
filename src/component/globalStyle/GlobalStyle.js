@@ -35,6 +35,21 @@ export const globalStyle = makeStyles(() => ({
     display: "flex",
     alignItems: "center",
   },
+
+  marginWithBold: {
+    fontWeight: "bold",
+    marginLeft: "10px",
+  },
+  flexStartColumn: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "flexStart",
+  },
+  flexWithCenterJustify: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  },
   lineHeightOne: {
     lineHeight: "1px",
   },
@@ -46,6 +61,9 @@ export const globalStyle = makeStyles(() => ({
   },
   marginLeft: {
     marginLeft: "12px",
+  },
+  marginRightTwelve: {
+    marginRight: "12px",
   },
   fontSizeFourteen: {
     fontSize: "14px",
@@ -77,5 +95,22 @@ export const globalStyle = makeStyles(() => ({
     borderRadius: "25px",
     width: "100%",
     padding: "3px 10px",
+  },
+  marginWithPadding: {
+    margin: "20px 0",
+    padding: "15px",
+  },
+  marginTopWithPadding: {
+    marginTop: "30px",
+    padding: "15px",
+  },
+  greenColor: {
+    color: "green",
+    marginRight: "7px",
+  },
+
+  orangeColor: {
+    color: "Orange",
+    marginRight: "7px",
   },
 }));
