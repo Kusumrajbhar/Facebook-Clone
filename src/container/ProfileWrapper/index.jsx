@@ -4,7 +4,7 @@ import { Grid, InputBase, Avatar, Paper, Button } from "@material-ui/core";
 import girl1 from "../../Assets/Images/girl1.jpg";
 import userStyle from "./ProfileStyle";
 import WhatInMindPage from "../HomeWrapper/WhatInMindPage";
-import { profileData } from "../../datas/Profile/ProfileData";
+import { ProfileData } from "../../datas/Profile/ProfileData";
 import { globalStyle } from "../../component/globalStyle/GlobalStyle";
 import PostCard from "../HomeWrapper/PostCard";
 
@@ -70,7 +70,7 @@ function ProfileWrapper() {
                 Add Bio
               </Button>
 
-              {profileData.map((data, index) => (
+              {ProfileData.map((data, index) => (
                 <div className={classes.introData} key={index}>
                   <span className={globalClass.alignContentLeft}>
                     <span className={globalClass.marginRightTen}>

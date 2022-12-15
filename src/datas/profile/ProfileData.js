@@ -4,7 +4,7 @@ import { IoLocationSharp } from "react-icons/io5";
 import { BsHeartFill } from "react-icons/bs";
 import { AiFillClockCircle } from "react-icons/ai";
 
-const ProfileData = [
+export const ProfileData = [
   {
     icon: <GiWhiteBook size="21" />,
     info: "Studied at Shri L R Tiwari College of Engineering",
@@ -28,4 +28,3 @@ const ProfileData = [
 ];
 
 
-export { ProfileData};
