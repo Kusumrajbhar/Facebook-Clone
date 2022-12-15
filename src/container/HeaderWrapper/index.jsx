@@ -18,7 +18,7 @@ import MenuModal from "../../component/modals/MenuModal";
 import MessengerModal from "../../component/modals/MessengerModal";
 import NotificationModal from "../../component/modals/NotificationModal";
 import AccountModal from "../../component/modals/AccountModal";
-import { mainHeaderData } from "../../datas/Header/HeaderData";
+import { HeaderData } from "../../datas/header/HeaderData";
 import FacebookLogo from "../../Assets/Images/FacebookLogo.png";
 
 const HeaderWrapper = ({ modeChangeHandler, lightModeHandler }) => {
@@ -71,7 +71,7 @@ const HeaderWrapper = ({ modeChangeHandler, lightModeHandler }) => {
           </div>
 
           <div className={classes.centerHeader}>
-            {mainHeaderData.map((data, index) => (
+            {HeaderData.map((data, index) => (
               <NavLink key={index} to={data.path} activeClassName="active">
                 <Tooltip title={data.toolTipTitle}>
                   {/* <span className={classes.icons}>{data.icon}</span> */}

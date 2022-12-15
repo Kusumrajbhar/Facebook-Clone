@@ -17,14 +17,14 @@ import { RiShareForwardLine } from "react-icons/ri";
 
 import watchStyles from "./Style";
 import { globalStyle } from "../../component/globalStyle/GlobalStyle";
-import { cardData } from "../../datas/Profile/ProfileData";
+import { CardData } from "../../datas/profile/CardData";
 
 function WatchMainContent() {
   const classes = watchStyles();
   const globalClass = globalStyle();
   return (
     <>
-      {cardData.map((data, index) => (
+      {CardData.map((data, index) => (
         <Paper key={index} className={classes.cardMain}>
           <div className={globalClass.lineHeightOne}>
             <div className={classes.cardHeader}>

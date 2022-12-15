@@ -3,7 +3,7 @@ import OndemandVideoIcon from "@material-ui/icons/OndemandVideo";
 import StorefrontIcon from "@material-ui/icons/Storefront";
 import PeopleAltIcon from "@material-ui/icons/PeopleAlt";
 import SportsEsportsIcon from "@material-ui/icons/SportsEsports";
-const mainHeaderData = [
+const HeaderData = [
   {
     path: "/",
     icon: <HomeIcon color="action" className="icons" />,
@@ -31,4 +31,4 @@ const mainHeaderData = [
   },
 ];
 
-export { mainHeaderData };
+export {HeaderData };
